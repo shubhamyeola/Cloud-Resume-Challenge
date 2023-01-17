@@ -1,4 +1,4 @@
-name: Upload Website
+name: S3 Sync
 
 on:
   push:
@@ -17,5 +17,9 @@ jobs:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+<<<<<<< HEAD:.github/workflows/BuildAndDeploy.yml
         AWS_REGION: 'ap-south-1'   # optional: defaults to us-east-1
        
+=======
+        AWS_REGION: 'ap-south-1' 
+>>>>>>> 896ca9522dce643770e4f0194eeff4ff54dc18c8:.github/workflows/main.yml
