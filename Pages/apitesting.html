@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsplash Random Image</title>
+</head>
+<body>
+    fetch('https://api.unsplash.com/photos/random/?client_id=PaRlCcNhVHlc1PZEdcBEoZA9-kZpUE6aiNIcfYum1jk')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
+</body>
+</html>
