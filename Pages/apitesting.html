@@ -8,14 +8,19 @@
 </head>
 <body>
   <script>
-    fetch('https://api.unsplash.com/photos/random/?client_id=PaRlCcNhVHlc1PZEdcBEoZA9-kZpUE6aiNIcfYum1jk')
-  .then((response) => response.json())
-  .then((data) => const imageUrl = data.urls.regular;
+    const apiKey = 'PaRlCcNhVHlc1PZEdcBEoZA9-kZpUE6aiNIcfYum1jk';
+const url = `https://api.unsplash.com/photos/random?client_id=${apiKey}`;
+//https://api.unsplash.com/photos/random/?client_id=PaRlCcNhVHlc1PZEdcBEoZA9-kZpUE6aiNIcfYum1jk
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    const imageUrl = data.urls.regular;
     const img = document.createElement('img');
     img.src = imageUrl;
     document.body.appendChild(img);
   })
   .catch(error => console.log(error));
+
   </script>
 
 </body>
